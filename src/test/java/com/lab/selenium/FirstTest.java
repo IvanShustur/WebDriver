@@ -18,7 +18,7 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElemen
 public class FirstTest {
     @Test
     public void test() throws IOException {
-        System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         WebDriver webDriver = new ChromeDriver();
         WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
         webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -29,8 +29,28 @@ public class FirstTest {
         WebElement imageOfGrape = wait.until(presenceOfElementLocated(By.xpath("//img[contains(@class, 'rg_i Q4LuWd')]")));
         imageOfGrape.click();
         Assert.assertTrue(imageOfGrape.isDisplayed());
-        File file = ((TakesScreenshot)webDriver).getScreenshotAs(OutputType.FILE);
+        File file = ((TakesScreenshot) webDriver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(file, new File("src/test/java/com/lab/selenium/screen.png"));
         webDriver.quit();
+    }
+        @Test
+        public void checkThatUrlNotContainsKeyword (){
+            System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver.exe");
+            WebDriver webDriver = new ChromeDriver();
+            WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
+            webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+            webDriver.get("https://google.com/ncr");
+            webDriver.findElement(By.name("q")).sendKeys(("grape" + Keys.ENTER));
+            Assert.assertTrue(webDriver.getCurrentUrl().contains("query=apple"));
+        }
+    @Test
+    public void checkThatUrlContainsKeyword (){
+        System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver.exe");
+        WebDriver webDriver = new ChromeDriver();
+        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
+        webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        webDriver.get("https://google.com/ncr");
+        webDriver.findElement(By.name("q")).sendKeys(("grape" + Keys.ENTER));
+        Assert.assertTrue(webDriver.getCurrentUrl().contains("grape"));
     }
 }
