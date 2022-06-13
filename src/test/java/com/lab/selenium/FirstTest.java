@@ -41,7 +41,7 @@ public class FirstTest {
             webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
             webDriver.get("https://google.com/ncr");
             webDriver.findElement(By.name("q")).sendKeys(("grape" + Keys.ENTER));
-            Assert.assertTrue(webDriver.getCurrentUrl().contains("query=apple"));
+            Assert.assertFalse(webDriver.getCurrentUrl().contains("query=apple"));
         }
     @Test
     public void checkThatUrlContainsKeyword (){

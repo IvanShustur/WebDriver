@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,6 +102,16 @@
                       <a href="#" panel-name="suite-com_lab_selenium_FirstTest" class="show-methods passed suite-com_lab_selenium_FirstTest"> (show)</a> <!-- show-methods passed suite-com_lab_selenium_FirstTest -->
                     </span>
                     <div class="method-list-content passed suite-com_lab_selenium_FirstTest">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-com_lab_selenium_FirstTest" title="com.lab.selenium.FirstTest" class="method navigator-link" hash-for-method="checkThatUrlContainsKeyword">checkThatUrlContainsKeyword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-com_lab_selenium_FirstTest" title="com.lab.selenium.FirstTest" class="method navigator-link" hash-for-method="checkThatUrlNotContainsKeyword">checkThatUrlNotContainsKeyword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-com_lab_selenium_FirstTest" title="com.lab.selenium.FirstTest" class="method navigator-link" hash-for-method="test">test</a> <!-- method navigator-link -->
@@ -125,6 +135,20 @@
               <span class="class-name">com.lab.selenium.FirstTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkThatUrlContainsKeyword">
+                  </a> <!-- checkThatUrlContainsKeyword -->
+                  <span class="method-name">checkThatUrlContainsKeyword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkThatUrlNotContainsKeyword">
+                  </a> <!-- checkThatUrlNotContainsKeyword -->
+                  <span class="method-name">checkThatUrlNotContainsKeyword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="test">
@@ -185,16 +209,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'test')
 data.setCell(0, 2, 'com.lab.selenium.FirstTest')
-data.setCell(0, 3, 10023);
+data.setCell(0, 3, 7890);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'checkThatUrlContainsKeyword')
+data.setCell(1, 2, 'com.lab.selenium.FirstTest')
+data.setCell(1, 3, 5706);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'checkThatUrlNotContainsKeyword')
+data.setCell(2, 2, 'com.lab.selenium.FirstTest')
+data.setCell(2, 3, 3692);
 window.suiteTableData['com_lab_selenium_FirstTest']= { tableData: data, tableDiv: 'times-div-com_lab_selenium_FirstTest'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 17 seconds</span>
               <div id="times-div-com_lab_selenium_FirstTest">
               </div> <!-- times-div-com_lab_selenium_FirstTest -->
             </div> <!-- times-div -->
@@ -222,8 +254,16 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.lab.selenium.FirstTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">test</span>
+                <span class="method-name">checkThatUrlContainsKeyword</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkThatUrlNotContainsKeyword</span>
+                <span class="method-start">5708 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">test</span>
+                <span class="method-start">9401 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
